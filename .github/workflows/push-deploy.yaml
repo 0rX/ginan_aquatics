@@ -12,16 +12,12 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v1
-      - name: NPM Build
-        run: |
-          npm install
-          npm run prod
       - name: Put built assets in artifacts
         uses: actions/upload-artifact@v1
         with:
           name: assets
           path: public
-          retention-days: 3
+          retention-days: 1
   web-deploy:
     name: Deploy Project to Production Server
     runs-on: ubuntu-latest
