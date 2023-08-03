@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+:root {
+    --primary-color: #CD9A05;
+    --primary-color-alt: #ffbf00;
+    --yellow-color: #FFC041;
+    --white-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.fm-2 {
+    font-family: 'Audiowide';
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color) !important;
+    box-shadow: none !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-alt);
+    border-color: var(--primary-color-alt);
+}
+
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.fs-7 {
+    font-size: 14px;
+}
+
+.fs-8 {
+    font-size: 12px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+section .section-title {
+    font-size: 36px;
+}
+
+.header-section .header-title {
+    font-size: 52px;
+}
+
+.header-section p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collection-section .card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.collection-section .card {
+    transition: .3s;
+}
+
+.collection-section .card:hover {
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 50px 0;
+    }
+
+    .header-section {
+        padding: 50px 0;
+    }
+
+    .header-section .header-title {
+        font-size: 30px;
+    }
+
+    .header-section p {
+        width: 100%;
+    }
+
+    section .section-title {
+        font-size: 24px;
+    }
+
+    .collection-section .card .card-img-top {
+        height: 160px;
+    }
+}
+
+.navbar .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #e3e3e3 !important;
+}
