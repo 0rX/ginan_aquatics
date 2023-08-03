@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: NPM Build
-        run:|
+        run:
           npm install
           npm run prod
       - name: Put built assets in artifacts
