@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: NPM Build
-        run:
+        run: |
           npm install
           npm run prod
       - name: Put built assets in artifacts
@@ -40,7 +40,7 @@ jobs:
           php-version: '8.0'
           extensions-csv: mbstring, bcmath
       - name: Composer install 
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install -q --ignore-platform-reqs --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
       - name: Sync Files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
