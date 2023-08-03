@@ -26,7 +26,7 @@ jobs:
     name: Deploy Project to Production Server
     runs-on: ubuntu-latest
     needs: [ build-js-production ]
-    if github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     steps:
       - uses: actions/checkout@v1
       - name: Fetch build Assets from Artifacts
