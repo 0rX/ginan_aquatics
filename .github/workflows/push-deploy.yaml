@@ -44,4 +44,13 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
+      - name: php artisan migrate
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: 
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY}}
+
 
