@@ -44,10 +44,10 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-      - name: cd ~/public_html/testing.vegasdelta.com && php artisan migrate
+      - name: php artisan migrate through ssh access
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: 
+          command: cd ~/public_html/testing.vegasdelta.com && php artisan migrate
           host: ${{ secrets.SSH_HOST }}
           port: 65002
           username: ${{ secrets.SSH_USERNAME }}
